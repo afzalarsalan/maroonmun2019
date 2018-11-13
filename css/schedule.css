@@ -1,5 +1,6 @@
-h1 {
-    text-align: center;
+h2 {
+    padding-left: 5vw;
+    color: maroon;
 }
 
 p {
@@ -9,4 +10,23 @@ p {
 
 table {
     padding: 0 5vw;
+    border-spacing: 20px;
+}
+
+th {
+    padding: 5px 0px;
+    text-align: left;
+    color: maroon;
+}
+
+tr {
+    padding: 10px 0px;
+}
+
+td:first-child {
+    font-weight: bold;
+}
+
+tr:first-child th {
+    text-align: center;
 }

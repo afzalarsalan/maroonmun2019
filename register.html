@@ -6,6 +6,7 @@
         <meta name="description" content="Registration">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
         <link href="css/register.css" rel="stylesheet"/>
+        <link href="css/side-nav.css" rel="stylesheet"/>
         <style>
             body {
                 margin: 0 0 0 0;
@@ -20,15 +21,17 @@
                 justify-content: center;
                 height: 48px;
                 width: 100%;
-                background-color: wheat;
-                color: white;
+                background-color: white;
+                color: maroon;
                 z-index: 2;
                 box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
             }
-            #menuBar i {
+            #menuBar button {
                 position: fixed;
                 left: 12px;
                 color: maroon;
+                background-color: white;
+                border: none;
             }
 
             #menuContainer img {
@@ -40,12 +43,43 @@
     <body>
         <header>
             <div id="menuBar">
-                <i class="material-icons">menu</i>
+                <button class="js-menu-show material-icons">menu</button>
                 <div id="menuContainer">
                     <img src="img/corrected-logo.png">
                 </div>
             </div>
         </header>
-        <p>Insert our final Registration solution here, probably Google Forms</p>
+        <aside class="js-side-nav side-nav">
+            <nav class="js-side-nav-container side-nav__container">
+                <button class="js-menu-hide side-nav__hide material-icons">close</button>
+                <header class="side-nav__header">
+                MaroonMUN 2019
+                </header>
+                <ul class="side-nav__content">
+                <a href="/index.html"><li>Home</li></a>
+                <a href="/schedule.html"><li>Schedule</li></a>
+                <a><li>Committees</li></a>
+                <a href="/register.html"><li>Register</li></a>
+                </ul>
+            </nav>
+        </aside>
+        <h2>Registration</h2>
+        <div class="card">
+            <h3>Fees and Due Dates</h3>
+            <p>Delegation Fee: $65</p>
+            <p>Per Delegate Fee: $55</p>
+            <h4>Early Registration ends December 21, 2018</h4>
+            <h4>Regular Registration ends February 1, 2019</h4>
+        </div>
+        <div class="card">
+            <h3>Through Email</h3>
+            <p>Please contact us at <a href="mailto:maroonmundepgen@gmail.com?subject=MaroonMUN Registration&cc=tamunsecgen@gmail.com">maroonmundepgen@gmail.com</a> with your school information and delegation size</p>
+        </div>
+        <div class="card">
+            <h3>Through Google Form</h3>
+            <p>Please fill out our <a href="https://goo.gl/forms/43QNY3JvwUThIBrn1">Google Form</a> and we will reach out to you at our earliest opportunity</p>
+        </div>
+        <script src="js/detabinator.js"></script>
+        <script src="js/side-nav.js"></script>
     </body>
 </html>

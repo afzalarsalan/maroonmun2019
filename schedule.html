@@ -6,6 +6,7 @@
         <meta name="description" content="Conference Schedule">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
         <link href="css/schedule.css" rel="stylesheet"/>
+        <link href="css/side-nav.css" rel="stylesheet"/>
         <style>
             body {
                 margin: 0 0 0 0;
@@ -20,15 +21,17 @@
                 justify-content: center;
                 height: 48px;
                 width: 100%;
-                background-color: wheat;
-                color: white;
+                background-color: white;
+                color: maroon;
                 z-index: 2;
                 box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
             }
-            #menuBar i {
+            #menuBar button {
                 position: fixed;
                 left: 12px;
                 color: maroon;
+                border: none;
+                background-color: white;
             }
 
             #menuContainer img {
@@ -40,14 +43,28 @@
     <body>
         <header>
             <div id="menuBar">
-                <i class="material-icons">menu</i>
+                <button class="js-menu-show material-icons">menu</button>
                 <div id="menuContainer">
                     <img src="img/corrected-logo.png">
                 </div>
             </div>
         </header>
-        <h1>Schedule</h1>
-        <p>The following schedule is tenative, but should be mostly accurate in terms on the time we start and the time we finish each day.</p>
+        <aside class="js-side-nav side-nav">
+            <nav class="js-side-nav-container side-nav__container">
+                <button class="js-menu-hide side-nav__hide material-icons">close</button>
+                <header class="side-nav__header">
+                MaroonMUN 2019
+                </header>
+                <ul class="side-nav__content">
+                <a href="/index.html"><li>Home</li></a>
+                <a href="/schedule.html"><li>Schedule</li></a>
+                <a><li>Committees</li></a>
+                <a href="/register.html"><li>Register</li></a>
+                </ul>
+            </nav>
+        </aside>
+        <h2>Schedule</h2>
+        <p>The following schedule is subject to change, but is accurate in terms of the start and end times each day.</p>
         <table>
             <tr>
                 <th>Time</th>
@@ -61,16 +78,73 @@
                 <td>Opening Ceremony</td>
             </tr>
             <tr>
+                <td>7:00 PM</td>
+                <td>Mini Open House</td>
+            </tr>
+            <tr>
+                <td>8:00 PM</td>
+                <td>End of Day 1</td>
+            </tr>
+            <tr>
                 <th>Saturday</th>
+            </tr>
+            <tr>
+                <td>8:30 AM</td>
+                <td>Breakfast</td>
             </tr>
             <tr>
                 <td>9:00 AM</td>
                 <td>Session 1</td>
             </tr>
             <tr>
-                <td>12:00 PM</td>
+                <td>12:30 PM</td>
                 <td>Lunch</td>
             </tr>
+            <tr>
+                <td>2:00 PM</td>
+                <td>Session 2</td>
+            </tr>
+            <tr>
+                <td>7:00 PM</td>
+                <td>Dinner</td>
+            </tr>
+            <tr>
+                <td>9:00 PM</td>
+                <td>Delegate Social</td>
+            </tr>
+            <tr>
+                <td>12:00 AM</td>
+                <td>End of Day 2</td>
+            </tr>
+            <tr>
+                <th>Sunday</th>
+            </tr>
+            <tr>
+                <td>9:00 AM</td>
+                <td>Breakfast</td>
+            </tr>
+            <tr>
+                <td>9:30 AM</td>
+                <td>Session 3</td>
+            </tr>
+            <tr>
+                <td>12:30 PM</td>
+                <td>Lunch</td>
+            </tr>
+            <tr>
+                <td>2:00 PM</td>
+                <td>Session 4</td>
+            </tr>
+            <tr>
+                <td>4:00 PM</td>
+                <td>Closing Ceremony</td>
+            </tr>
+            <tr>
+                <td>5:00 PM</td>
+                <td>End of Day 3</td>
+            </tr>
         </table>
+        <script src="js/detabinator.js"></script>
+        <script src="js/side-nav.js"></script>
     </body>
 </html>

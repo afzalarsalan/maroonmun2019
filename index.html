@@ -6,6 +6,7 @@
         <meta name="description" content="Texas A&M University's inaugural Model United Nations Conference held from February 22-24, 2019">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
         <link href="css/main.css" rel="stylesheet"/>
+        <link href="css/side-nav.css" rel="stylesheet"/>
         <style>
             body {
                 margin: 0 0 0 0;
@@ -20,15 +21,17 @@
                 justify-content: center;
                 height: 48px;
                 width: 100%;
-                background-color: wheat;
+                background-color: white;
                 color: white;
                 z-index: 2;
-                box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+                box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
             }
-            #menuBar i {
+            #menuBar button {
                 position: fixed;
                 left: 12px;
                 color: maroon;
+                border: none;
+                background-color: white;
             }
 
             #menuContainer img {
@@ -40,12 +43,26 @@
     <body>
         <header>
             <div id="menuBar">
-                <i class="material-icons">menu</i>
+                <button class="js-menu-show header__menu-toggle material-icons">menu</button>
                 <div id="menuContainer">
                     <img src="img/corrected-logo.png">
                 </div>
             </div>
         </header>
+        <aside class="js-side-nav side-nav">
+            <nav class="js-side-nav-container side-nav__container">
+              <button class="js-menu-hide side-nav__hide material-icons">close</button>
+              <header class="side-nav__header">
+                MaroonMUN 2019
+              </header>
+              <ul class="side-nav__content">
+                <a href="/index.html"><li>Home</li></a>
+                <a href="/schedule.html"><li>Schedule</li></a>
+                <a><li>Committees</li></a>
+                <a href="/register.html"><li>Register</li></a>
+              </ul>
+            </nav>
+        </aside>
         <div id="top-banner">
             <h1>MaroonMUN</h1>
             <h3>February 22-24, 2019 <br>
@@ -62,5 +79,7 @@
             <p>We're glad to have you and insert a blurb about how we are crazy enough to hold this this conference</p>
             <p>We hope you have a great time and enjoy your time at our conference</p>
         </div>
+        <script src='js/detabinator.js'></script>
+        <script src='js/side-nav.js'></script>
     </body>
 </html>
